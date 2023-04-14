@@ -12,7 +12,7 @@ Routing
 		- What is your favorite language, and why
 	- Gallery
 		- Fetch data from given api
-		- Display the poster image and title at the least
+		- Display the poster image and title at the least (broken down and organized by genre or network)
 		- Link each poster to a show page
 		- Setup filters for tv shows (maybe network, genre, rating, etc) (at least 2 filters)
 	- Show Page
@@ -20,9 +20,11 @@ Routing
 		- Display information about the show in question
 			- Big image, title, rating, description, network, maybe there's trailer??? Etc...
 			- This page should be clean but VERY information heavy.
+			-------- (focus on this last)
 		- Setup the ability to allow reviews to be written about the show
 			- These do not need to be persistent. If they disappear on refresh, that's ok, but try working with localstorage if you'd like to stretch yourself.
 			- Create, Update, and Delete Reviews.
+			-------- (focus on this last)
 	- Contact
 		- Web form
 			- email
@@ -38,15 +40,16 @@ Routing
 Navigation
 	- Sidebar or Header
 	- Footer
-	- Pages may have other links to navigate around the app as well (like a "go back" type button)
+	- Pages MAY have other links to navigate around the app as well (like a "go back" type button)
 
 Research and Bring in a library you haven't used or learned about in class
 	- IE: a carousel component to display your shows.
+	(go through npm docs and find one that is built for react and properly use one)
 
 This MUST be responsive. Develop your projects for at least desktop and mobile phone. Any other breakpoints would be extra.
 ALL pages that have asynchronous behavior need to reflect good UX (IE: Disabling buttons, rendering loading components, etc).
 You need to include a valid SCSS mixin.
-You need to include a SCSS variable
+You need to include a SCSS variable (reuse colors with variables?)
 You must use the CRA toolchain to spin up your project. Prune all irrelevant tools (files, functions, comments, dependencies, etc…)
 Include at LEAST one icon from font awesome. Set it up for a global store, not individual imports.
 Commit commit commit!!! I should not see 1 commit for the entire project. Find logical stopping points to commit and push to Github. (IE: per feature). I will not accept excuses related to you losing your code, that is a failing mark.
