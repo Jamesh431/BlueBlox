@@ -9,6 +9,8 @@ export default function FetchInfo() {
   }
 
   useEffect(() => {
+    // fetch("https://api.tvmaze.com/singlesearch/shows?q=TheMandalorian")
+    // fetch("https://api.tvmaze.com/singlesearch/shows?q=The blacklist")
     fetch("http://api.tvmaze.com/shows")
       // method: "POST"
       // body: JSON.stringify(tvMazeInfo),
