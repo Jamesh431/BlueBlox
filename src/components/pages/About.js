@@ -26,7 +26,7 @@ My favorite language is currently JavaScript as first its documentation is easie
 export default function About() {
   return (
 
-    <>
+    <div className="AboutPage">
       <div className="ProjectDescription">
         <h1>Project Description</h1>
         <p>This project is my capstone for the Front End Course DevPipeline</p>
@@ -51,6 +51,6 @@ export default function About() {
         <h1>My Favorite language</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, iste reprehenderit debitis officia ducimus inventore natus asperiores quis labore dolorem quibusdam saepe quo esse nemo nisi unde tempore molestias voluptatibus!</p>
       </div>
-    </>
+    </div>
     )
 }

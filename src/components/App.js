@@ -72,13 +72,18 @@ Use other sites for design ideas. The internet is a big place.
 
 If you have time, try your hand at deploying to Netlify (or other hosting service). This is NOT a requirement. Focus on this last if anything.
 */
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-function App() {
+import About from "./pages/About";
+import FetchInfo from "./util/FetchInfo";
+
+export default function App() {
   return (
     <div className="App">
-      
+      <About />
+			<FetchInfo />
     </div>
   );
 }
 
-export default App;
+
