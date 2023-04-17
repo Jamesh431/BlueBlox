@@ -79,6 +79,7 @@ import Landing from "./pages/Landing"
 import About from "./pages/About";
 import Contact from "./pages/Contact"
 import FetchInfo from "./util/FetchInfo";
+import Footer from "./navigation/Footer"
 
 
 export default function App() {
@@ -93,7 +94,7 @@ export default function App() {
 					<Route path='/' component = {Contact} />
 				</Switch>
 
-				
+				<Footer />
 			</Router>
 			<FetchInfo />
     </div>

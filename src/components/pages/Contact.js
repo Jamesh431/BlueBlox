@@ -23,7 +23,7 @@ export default function Contact() {
           <p>fake.email@fakedomain.com</p>
         </div>
         <div className="address-wrapper">
-          <p>123 Butthead st, salt lake city, UT</p>
+          <p>123 Butthead Street, Salt Lake City, UT</p>
         </div>
       </div>
       
