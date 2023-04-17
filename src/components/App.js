@@ -77,6 +77,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import About from "./pages/About";
 import FetchInfo from "./util/FetchInfo";
 
+
 export default function App() {
   return (
     <div className="App">
