@@ -19,16 +19,21 @@ export default function FetchInfo() {
     // headers: { "Access-Control-Allow-Origin": "http://localhost:3000/" }
     fetch("http://api.tvmaze.com/shows") 
     .then((res) => res.json())
-    .then ((data) => sortShows(data))
+    .then ((data) =>{
+      console.log(data)
+      return sortShows(data)
+    })
     .catch(err => console.log('Error: Fetch was not complete',err))
   })
 
   function sortShows(ArrofObj) {
     ArrofObj.sort((firstObj, secObj) => {
-      if (firstObj.rating > secObj.rating) {
-        return 1
-      } else {
-        return -1
+      if (firstObj.rating.average && secObj.rating.average) {
+        if (firstObj.rating.average > secObj.rating.average) {
+          return -1
+        } else {
+          return 1
+        }
       }
     })
 
