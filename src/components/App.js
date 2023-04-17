@@ -74,14 +74,18 @@ If you have time, try your hand at deploying to Netlify (or other hosting servic
 */
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+import Landing from "./pages/Landing"
 import About from "./pages/About";
+import Contact from "./pages/Contact"
 import FetchInfo from "./util/FetchInfo";
 
 
 export default function App() {
   return (
     <div className="App">
-      <About />
+			<Landing />
+			{/* <Contact /> */}
+			{/* <About /> */}
 			<FetchInfo />
     </div>
   );
