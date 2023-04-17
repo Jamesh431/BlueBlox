@@ -74,6 +74,7 @@ If you have time, try your hand at deploying to Netlify (or other hosting servic
 */
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+import Navbar from "./navigation/Navbar";
 import Landing from "./pages/Landing"
 import About from "./pages/About";
 import Contact from "./pages/Contact"
@@ -83,9 +84,17 @@ import FetchInfo from "./util/FetchInfo";
 export default function App() {
   return (
     <div className="App">
-			<Landing />
-			{/* <Contact /> */}
-			{/* <About /> */}
+			<Router>
+				<Navbar />
+
+				<Switch>
+					<Route exact path='/' component = {Landing} />
+					<Route path='/about' component = {About} />
+					<Route path='/' component = {Contact} />
+				</Switch>
+
+				
+			</Router>
 			<FetchInfo />
     </div>
   );
