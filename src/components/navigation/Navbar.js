@@ -34,6 +34,10 @@ export default function Navbar(props) {
             placeholder="Search for a show"
           />
         </div>
+
+        <div className="search-button">
+          <button type="submit">?</button>
+        </div>
       </div>
     </div>
   )
