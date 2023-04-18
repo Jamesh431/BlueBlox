@@ -15,51 +15,52 @@
 export default function Contact() {
   return (
     <div className="contact-page">
-      <div className="contact-information-container">
-        <div className="number-wrapper">
-          <p>555-555-555</p>
+      <div className="contact-container">
+        <div className="contact-header">
+          <h1>Contact page</h1>
         </div>
-        <div className="email-wrapper">
-          <p>fake.email@fakedomain.com</p>
+        <div className="contact-information-container">
+          <div className="number-wrapper">
+            <p>Phone: 555-555-555</p>
+          </div>
+          <div className="email-wrapper">
+            <p>Email: fake.email@fakedomain.com</p>
+          </div>
+          <div className="address-wrapper">
+            <p>Address: 123 Butthead Street, Salt Lake City, UT</p>
+          </div>
         </div>
-        <div className="address-wrapper">
-          <p>123 Butthead Street, Salt Lake City, UT</p>
-        </div>
-      </div>
-      
-      
-      <div className="contact-us-container">
-        <div className="text-wrapper">
-          <h1>Contact Us</h1>
-        </div>
+        
+        
+        <div className="contact-us-container">
+          <div className="text-wrapper">
+            <h1>Contact Us</h1>
+          </div>
 
-        <div className="user-information-wrapper">
-          <div className="user-email">
-            <input type="email" placeholder="Your email"></input>
+          <div className="user-information-wrapper">
+            <div className="user-email">
+              <input type="email" placeholder="Your email"></input>
+            </div>
+
+            <div className="subject-wrapper">
+              <input type="text" placeholder="Subject"></input>
+            </div>
           </div>
 
           <div className="users-name">
-            <div className="user-first-name">
-              <input type="text" placeholder="First Name"></input>
-            </div>
-
-            <div className="user-last-name">
-              <input type="text" placeholder="Last Name"></input>
+            <div className="user-full-name">
+              <input type="text" placeholder="Your Name"></input>
             </div>
           </div>
-        </div>
 
-        <div className="message-container">
-          <div className="subject-wrapper">
-            <input type="text" placeholder="subject"></input>
-          </div>
+          <div className="message-container">
+            <div className="text-wrapper">
+              <input type="subject" placeholder="Message here"></input>
+            </div>
 
-          <div className="text-wrapper">
-            <input type="subject" placeholder="Message here"></input>
-          </div>
-
-          <div className="submit-wrapper">
-            <button>Submit</button>
+            <div className="submit-wrapper">
+              <button>Submit</button>
+            </div>
           </div>
         </div>
       </div>
