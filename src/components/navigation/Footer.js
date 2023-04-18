@@ -29,6 +29,12 @@ export default function Footer() {
             Contact Us
           </NavLink>
         </div>
+
+        <div className="about-nav-wrapper">
+          <NavLink exact to='/about'>
+            About
+          </NavLink>
+        </div>
       </div>
     </div>
   )

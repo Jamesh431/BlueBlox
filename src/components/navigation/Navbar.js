@@ -16,13 +16,6 @@ export default function Navbar(props) {
             Home
           </NavLink>
         </div>
-
-        <div className="about-nav-wrapper">
-          <NavLink exact to='/about'>
-            About
-          </NavLink>
-        </div>
-
       </div>
 
       <div className="nav-right">

@@ -1,8 +1,6 @@
 export default function Landing() {
   return(
     <div className="LandingPage">
-      <div className="SortedShows">
-        
         <div className="CategoryContainer" id="Popular">
           <div className="HeaderWrapper">
             <h1>Most Popular</h1>
@@ -81,6 +79,5 @@ export default function Landing() {
           </div>
         </div>
       </div>
-    </div>
   )
 }

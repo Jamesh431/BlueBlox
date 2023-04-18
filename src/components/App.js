@@ -20,11 +20,11 @@ Routing
 		- Display information about the show in question
 			- Big image, title, rating, description, network, maybe there's trailer??? Etc...
 			- This page should be clean but VERY information heavy.
-			-------- (focus on this last)
+			--------\/ (focus on this last)
 		- Setup the ability to allow reviews to be written about the show
 			- These do not need to be persistent. If they disappear on refresh, that's ok, but try working with localstorage if you'd like to stretch yourself.
 			- Create, Update, and Delete Reviews.
-			-------- (focus on this last)
+			--------/\ (focus on this last)
 	- Contact
 		- Web form
 			- email
