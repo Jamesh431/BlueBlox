@@ -1,45 +1,35 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 
 
 export default function FetchInfo() {
-  const showObjects = {}
-  // const [shows, setShows] = useState()
+    const [shows, setShows] = useState([])
   
-  // const tvMazeInfo = {
-  //   "username": "jdhales",
-  //   "apikey": "_nsfO4xzpJw0R-Vsg5GxsVEUeuu1ouFo"
-  // }
+    useEffect(() => {
+      // fetch("https://api.tvmaze.com/singlesearch/shows?q=The-Mandalorian")
+      // fetch("https://api.tvmaze.com/singlesearch/shows?q=The-blacklist")
+      fetch("http://api.tvmaze.com/shows") 
+      .then((res) => res.json())
 
-  useEffect(() => {
-    // fetch("https://api.tvmaze.com/singlesearch/shows?q=The-Mandalorian")
-    // fetch("https://api.tvmaze.com/singlesearch/shows?q=The-blacklist")
-    // method: "POST"
-    // body: JSON.stringify(tvMazeInfo),
-    // headers: { "Access-Control-Allow-Origin": "http://localhost:3000/" }
-    fetch("http://api.tvmaze.com/shows") 
-    .then((res) => res.json())
-    .then ((data) =>{
-      console.log(data)
-      return sortShows(data)
-    })
-    .catch(err => console.log('Error: Fetch was not complete',err))
-  })
+      .then((data) => { 
+        console.log(data)
+        return setShows(data) 
+      })
 
-  function sortShows(ArrofObj) {
-    ArrofObj.sort((firstObj, secObj) => {
-      if (firstObj.rating.average && secObj.rating.average) {
-        if (firstObj.rating.average > secObj.rating.average) {
-          return -1
-        } else {
-          return 1
-        }
-      }
-    })
+      .catch(err => console.log('Error: Fetch was not complete',err))
+    }, []);
 
-    console.log(ArrofObj)
-  }
 
+    console.log(shows)
+    return ({shows})
+
+    
+}
+
+
+
+// -------------
+  // either filter through or splice to set results that have already been sorted for the top 20
 
 
   // const [person, setPerson] = useState({})
@@ -61,7 +51,7 @@ export default function FetchInfo() {
 
   //   return () => controller.abort();
   // }, []);
-}
+// }
 
 
 

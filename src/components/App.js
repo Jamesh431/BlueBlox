@@ -79,6 +79,7 @@ import Landing from "./pages/Landing"
 import About from "./pages/About";
 import Contact from "./pages/Contact"
 import FetchInfo from "./util/FetchInfo";
+import SortByRating from "./util/SortByRating"
 import Footer from "./navigation/Footer"
 
 
@@ -92,11 +93,13 @@ export default function App() {
 					<Route exact path='/' component = {Landing} />
 					<Route path='/about' component = {About} />
 					<Route path='/' component = {Contact} />
+					{/* <Route path="/categories" compoe */}
 				</Switch>
 
+				{/* <FetchInfo /> */}
+				<SortByRating />
 				<Footer />
 			</Router>
-			<FetchInfo />
     </div>
   );
 }
