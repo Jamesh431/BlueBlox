@@ -3,28 +3,19 @@ import { useEffect, useState } from "react";
 
 
 export default function FetchInfo() {
-    const [shows, setShows] = useState([])
-  
-    useEffect(() => {
-      // fetch("https://api.tvmaze.com/singlesearch/shows?q=The-Mandalorian")
-      // fetch("https://api.tvmaze.com/singlesearch/shows?q=The-blacklist")
-      fetch("http://api.tvmaze.com/shows") 
-      .then((res) => res.json())
+  const [shows, setShows] = useState([])
 
-      .then((data) => { 
-        console.log(data)
-        return setShows(data) 
-      })
+  useEffect(() => {
+    fetch("http://api.tvmaze.com/shows") 
+    .then((res) => res.json())
+    .then((data) => setShows(data))
+    .catch(err => console.log('Error: Fetch was not complete',err))
+  },[])
 
-      .catch(err => console.log('Error: Fetch was not complete',err))
-    }, []);
-
-
-    console.log(shows)
-    return ({shows})
-
-    
+  return shows
 }
+
+
 
 
 

@@ -93,11 +93,7 @@ export default function App() {
 					<Route exact path='/' component = {Landing} />
 					<Route path='/about' component = {About} />
 					<Route path='/' component = {Contact} />
-					{/* <Route path="/categories" compoe */}
 				</Switch>
-
-				{/* <FetchInfo /> */}
-				<SortByRating />
 				<Footer />
 			</Router>
     </div>
