@@ -9,7 +9,7 @@ export default function Landing() {
           </div>
 
           <div className="ShowsWrapper">
-            <SortByRating rowSize={10}/>
+            <SortByRating spliceStart={0} rowSize={10}/>
             <div className="ShowContainer">Insert Show Here</div>
             <div className="ShowContainer">Insert Show Here</div>
             <div className="ShowContainer">Insert Show Here</div>

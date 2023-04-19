@@ -18,11 +18,16 @@ export default function SortByRating(props) {
     })
 
   
-    const sortedShows = [...arrOfObj].splice(0, props.rowSize)
-      console.log(arrOfObj)
-      console.log(sortedShows)
+    const sortedShows = [...arrOfObj].splice(props.spliceStart, props.rowSize)
     
+    // now just map it out to append to the dom
+    // function 
+
   },[arrOfObj])
+
+
+
+
   
 
 
