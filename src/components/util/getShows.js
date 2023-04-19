@@ -1,24 +1,12 @@
-import { useEffect, useState } from "react";
-
-
-
-export default function FetchInfo() {
-  const [shows, setShows] = useState([])
-
-  useEffect(() => {
-    fetch("http://api.tvmaze.com/shows") 
-    .then((res) => res.json())
-    .then((data) => setShows(data))
+const getShows = async () =>  {
+  const shows = await fetch("http://api.tvmaze.com/shows") 
+    .then((res) => { return res.json() })
     .catch(err => console.log('Error: Fetch was not complete',err))
-  },[])
 
   return shows
 }
 
-
-
-
-
+export default getShows;
 // -------------
   // either filter through or splice to set results that have already been sorted for the top 20
 

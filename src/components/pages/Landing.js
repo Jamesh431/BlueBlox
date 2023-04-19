@@ -1,4 +1,4 @@
-import SortByRating from "../util/SortByRating"
+import RenderPopular from "../util/RenderPopular"
 
 export default function Landing() {
   return(
@@ -9,7 +9,7 @@ export default function Landing() {
           </div>
 
           <div className="ShowsWrapper">
-            <SortByRating spliceStart={0} rowSize={10}/>
+            <RenderPopular spliceStart={0} rowSize={10}/>
             <div className="ShowContainer">Insert Show Here</div>
             <div className="ShowContainer">Insert Show Here</div>
             <div className="ShowContainer">Insert Show Here</div>
