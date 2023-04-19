@@ -18,13 +18,12 @@ export default function SortByRating(props) {
     })
 
   
-  const sortedShows = [...arrOfObj].slice(arrOfObj.length - (props.rowSize + 1)) 
-  
-  console.log(arrOfObj)
-  console.log(sortedShows)
-  // console.log(arrOfObj)
-   
+    const sortedShows = [...arrOfObj].splice(0, props.rowSize)
+      console.log(arrOfObj)
+      console.log(sortedShows)
+    
   },[arrOfObj])
+  
 
 
   // shortening objects in the array of objects here for only x amount of top shows
