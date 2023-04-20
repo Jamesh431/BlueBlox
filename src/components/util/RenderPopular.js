@@ -51,7 +51,17 @@ export default function RenderPopular(props) {
  
   // now just map it out to append to the dom
   
-return <div onClick={() => setCurrentSlice(cs => cs + PER_PAGE)} className="popular-shows-container">{renderPopularShows()}</div>
+return (
+  <div className="category-container">
+    <div className="header-wrapper">
+      <h1>Most Popular</h1>
+    </div>
+
+    <div className="show-container">
+      <div onClick={() => setCurrentSlice(cs => cs + PER_PAGE)} className="show-wrapper">{renderPopularShows()}</div>
+    </div>
+  </div>
+)
 
   // shortening objects in the array of objects here for only x amount of top shows
 }
