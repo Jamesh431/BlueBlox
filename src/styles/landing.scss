@@ -1,22 +1,26 @@
 .LandingPage {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
 
-  .CategoryContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  .shows-container {
 
-  .ShowsWrapper {
     display: flex;
     flex-direction: row;
-
-    .ShowContainer {
-      margin: 0 50px
-    }
+    width: 100%;
   }
 
-  }
+  // .CategoryContainer {
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: center;
+  //   align-items: center;
+
+  // .ShowsWrapper {
+  //   display: flex;
+  //   flex-direction: row;
+
+  //   .ShowContainer {
+  //     margin: 0 50px
+  //   }
+  // }
+
+  // }
 }

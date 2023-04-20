@@ -1,30 +1,16 @@
 import { useEffect, useState } from "react"
-// import { sortPopular } from "./FetchInfo.js"
+import ReactPaginate from "react-paginate"
 import getShows from "./getShows.js"
 
-// total records
-// no. per page 
-// no of pages t
-// curr page
+export default function RenderPopular() {
+  const [currentPage, setCurrentPage] = useState(0)
+  const [shows, setShows] = useState([]) 
+  const pageSize = 10;
 
-export default function RenderPopular(props) {
-  const [shows, setShows] = useState([])
-  const [currentSlice, setCurrentSlice] = useState(0)
-  const TOTAL_RECORDS = shows.length
-  const PER_PAGE = 10
-  const TOTAL_PAGES = TOTAL_RECORDS / PER_PAGE
-
-  // const arrOfObj = [...sortPopular].splice(props.spliceStart, props.rowSize)
-  function renderPopularShows() {
-    return shows.slice(currentSlice, currentSlice + 10).map(show => {
-      return (
-        <div key={show.id}>
-          <h1>{show.name}</h1>
-        </div>
-      )
-    })
-  }
-
+  const pageCount = Math.ceil(shows.length / pageSize)
+  const offset = currentPage * pageSize
+  const currentData = shows.slice(offset, offset + pageSize)
+  
   useEffect(() => {
     getShows()
      .then(data => {
@@ -42,14 +28,6 @@ export default function RenderPopular(props) {
     })
      .catch(err => console.error("Get Shows Erro: ", err))
   }, [])
-  // setNewArrOfObj(sortedShows)
-  // console.log(newArrOfObj)
-  // return () => {
-  //   <div><h1>{newArrOfObj}</h1></div>
-  // }
-  
- 
-  // now just map it out to append to the dom
   
 return (
   <div className="category-container">
@@ -57,13 +35,33 @@ return (
       <h1>Most Popular</h1>
     </div>
 
-    <div className="show-container">
-      <div onClick={() => setCurrentSlice(cs => cs + PER_PAGE)} className="show-wrapper">{renderPopularShows()}</div>
+
+    <div className="shows-container">
+      <div className="shows-wrapper">
+      {currentData.map(show => (
+        <div className="show-card">
+          <div key={show.name}>
+            <h1>{show.name}</h1>
+          </div>
+        </div>
+          ))}
+      </div>
+      <div className="paginate-controls">
+      <ReactPaginate
+        previousLabel={"<"}
+        nextLabel={">"}
+        breakLabel={"BREAK"}
+        pageCount={pageCount}
+        marginPagesDisplayed={0}
+        pageRangeDisplayed={0}
+        onPageChange={({ selected }) => setCurrentPage(selected)}
+        containerClassName={"pagination"}
+        activeClassName={"active"}
+      />
+      </div>
     </div>
   </div>
 )
-
-  // shortening objects in the array of objects here for only x amount of top shows
 }
 
 
