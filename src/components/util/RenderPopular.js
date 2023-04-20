@@ -5,7 +5,7 @@ import getShows from "./getShows.js"
 export default function RenderPopular() {
   const [currentPage, setCurrentPage] = useState(0)
   const [shows, setShows] = useState([]) 
-  const pageSize = 10;
+  const pageSize = 5;
 
   const pageCount = Math.ceil(shows.length / pageSize)
   const offset = currentPage * pageSize
@@ -29,6 +29,7 @@ export default function RenderPopular() {
      .catch(err => console.error("Get Shows Erro: ", err))
   }, [])
   
+  {console.log(shows)}
 return (
   <div className="category-container">
     <div className="header-wrapper">
