@@ -7,30 +7,3 @@ const getShows = async () =>  {
 }
 
 export default getShows;
-// -------------
-  // either filter through or splice to set results that have already been sorted for the top 20
-
-
-  // const [person, setPerson] = useState({})
-
-  // useEffect(() => {
-  //   const controller = new AbortController();
-  //   const { signal } = controller;
-
-  //   fetch("https://swapi.tech/api/people", {
-  //     signal
-  //   })
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       console.log(data)
-  //     })
-  //     .catch((err) => {
-  //       console.error("Get Person Error: ", err);
-  //     });
-
-  //   return () => controller.abort();
-  // }, []);
-// }
-
-
-
