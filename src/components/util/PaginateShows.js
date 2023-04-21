@@ -37,7 +37,13 @@ const PaginateShows = (props) => {
         <div className="shows-wrapper">
           {currentRangeOfRowOfShows.map((show) => (
             <div className="show-card" key={show.name}>
-              <h4>{show.name}</h4>
+              <div className="show-image">
+                <img src={show.image.medium}/>
+              </div>
+              
+              <div className="show-title"> 
+                <h4>{show.name}</h4>
+              </div>
             </div>
           ))}
         </div>
