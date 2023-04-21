@@ -11,6 +11,7 @@ const PaginateShows = (props) => {
     indexOfFirstShowInRow + numOfShowsOnRow
   );
 
+
   const handlePrevious = () => {
     if (currentRow > 0) {
       setCurrentRow(currentRow - 1);
@@ -40,14 +41,13 @@ const PaginateShows = (props) => {
               <div className="show-image">
                 <img src={show.image.medium}/>
               </div>
-              
+
               <div className="show-title"> 
                 <h2>{show.name}</h2>
               </div>
 
               <div className="show-description"> 
-               {show.summary}
-               {/* can prob slice the summary by the show.name.length + 25 + 10 (amount of characters for the <p> and whatever and then remove the last 4 characters.) Then with this can do a 'show.name + show.whateverspliceddesc' */}
+               {show.summary.replace(/<[^>]*>?/gm, '')}
               </div>
             </div>
           ))}
