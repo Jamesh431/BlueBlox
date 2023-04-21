@@ -42,7 +42,12 @@ const PaginateShows = (props) => {
               </div>
               
               <div className="show-title"> 
-                <h4>{show.name}</h4>
+                <h2>{show.name}</h2>
+              </div>
+
+              <div className="show-description"> 
+               {show.summary}
+               {/* can prob slice the summary by the show.name.length + 25 + 10 (amount of characters for the <p> and whatever and then remove the last 4 characters.) Then with this can do a 'show.name + show.whateverspliceddesc' */}
               </div>
             </div>
           ))}
