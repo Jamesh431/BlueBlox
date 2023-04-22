@@ -79,7 +79,7 @@ import Landing from "./pages/Landing"
 import About from "./pages/About";
 import Contact from "./pages/Contact"
 import ShowPage from "./pages/ShowPage";
-import MoviesByCategory from "./pages/MoviesByCategory";
+import ShowsByCategory from "./pages/ShowsByCategory";
 import Footer from "./navigation/Footer"
 
 
@@ -94,7 +94,7 @@ export default function App() {
 					<Route path='/about' component = {About} />
 					<Route path='/contact' component = {Contact} />
 					<Route path='/show/:showID' component={ShowPage} />
-					<Route path='/categories' component={MoviesByCategory} />
+					<Route path='/categories' component={ShowsByCategory} />
 				</Switch>
 				<Footer />
 			</Router>

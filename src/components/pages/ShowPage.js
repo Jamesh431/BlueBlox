@@ -42,7 +42,7 @@ export default function ShowPage() {
         </div>
 
         <div className="show-network">
-          <p>Network: {show.network ? show.network : 'N/A'}</p>
+          {/* <p>Network: {show.network ? show.network : 'N/A'}</p> */}
           {/* This returns an Objects are not valid as a React child error, find out why*/}
         </div>
 
