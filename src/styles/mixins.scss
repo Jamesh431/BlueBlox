@@ -1,0 +1,10 @@
+@mixin loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+@mixin background-scheme {
+  background-color: #1E1E24;
+}

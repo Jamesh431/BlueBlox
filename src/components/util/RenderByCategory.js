@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import getShows from "./getShows.js"
 import PaginateShows from "./PaginateShows.js"
 
-export default function SortByCat(props) {
+export default function RenderByCategory(props) {
   const [shows, setShows] = useState([])
 
   useEffect(() => {

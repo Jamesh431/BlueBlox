@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const PaginateShows = (props) => {
   const [currentRow, setCurrentRow] = useState(0);
@@ -39,7 +40,10 @@ const PaginateShows = (props) => {
           {currentRangeOfRowOfShows.map((show) => (
             <div className="show-card" key={show.name}>
               <div className="show-image">
+                <Link to={`show/${show.id}`}>
+
                 <img src={show.image.medium}/>
+                </Link>
               </div>
 
               <div className="show-title"> 

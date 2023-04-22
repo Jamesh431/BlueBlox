@@ -1,14 +1,14 @@
 import RenderPopular from "../util/RenderPopular"
-import SortByCat from "../util/SortByCat"
+import RenderByCategory from "../util/RenderByCategory"
 
 export default function Landing() {
   return(
     <div className="LandingPage">
             <RenderPopular />
 
-            <SortByCat genre={'Drama'}/>
+            <RenderByCategory genre={'Drama'}/>
 
-            <SortByCat genre={'Crime'}/>
+            <RenderByCategory genre={'Crime'}/>
 
         {/* <div className="CategoryContainer">
           <div className="HeaderWrapper">
