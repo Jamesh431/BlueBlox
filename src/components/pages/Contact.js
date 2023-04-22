@@ -19,6 +19,9 @@ export default function Contact() {
         <div className="contact-header">
           <h1>Contact page</h1>
         </div>
+        <div className="line-wrapper">
+          <hr></hr>
+        </div>
         <div className="contact-information-container">
           <div className="number-wrapper">
             <p>Phone: 555-555-555</p>

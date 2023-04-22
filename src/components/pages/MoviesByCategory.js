@@ -1,16 +1,55 @@
 import { useEffect, useState } from "react";
 
-function MoviesByCategory(props){
-  const [data,setData] = useState([])
+export default function MoviesByCategory(props){
+  const [shows,setShows] = useState([])
 
   useEffect(()=>{
-    const filteredData = filterFunction(props.data)
-    setData(filteredData)
-  }, [props])
+    
+  }, [])
   
   return(
-    <div>
-      <div>content</div>
+    <div className="browse-by-category">
+      <div className="header-container">
+        <div className="header-wrapper">
+          <h1>Browse by Category</h1>
+        </div>
+
+      <div className="category-selection">
+        <select class='form-control' >
+          <option value={}></option>
+          <option value={}></option>
+          <option value={}></option>
+          <option value={}></option>
+          <option value={}></option>
+          <option value={}></option>
+          <option value={}></option>
+          <option value={}></option>
+          <option value={}></option>
+          <option value={}></option>
+          <option value={}></option>
+          <option value={}></option>
+          <option value={}></option>
+          <option value={}></option>
+          <option value={}></option>
+          <option value={}></option>
+          <option value={}></option>
+          <option value={}></option>
+          <option value={}></option>
+          <option value={}></option>
+          <option value={}></option>
+          <option value={}></option>
+          <option value={}></option>
+          <option value={}></option>
+          <option value={}></option>
+          <option value={}></option>
+          <option value={}></option>
+        </select>
+      </div>
+
+        <div className="break-wrapper">
+          <hr></hr>
+        </div>
+      </div>
+
     </div>)
 }
-export default MoviesByCategory

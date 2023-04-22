@@ -16,6 +16,12 @@ export default function Navbar(props) {
             Home
           </NavLink>
         </div>
+
+        <div className="cat-nav-wrapperß">
+          <NavLink to='/categories'>
+            Browse by Category
+          </NavLink>
+        </div>
       </div>
 
       <div className="nav-right">
