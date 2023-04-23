@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react"
 import ScaleLoader from "react-spinners/ScaleLoader";
 
-import getOneShow from "../util/getOneShow";
+import getOneShow from "../helpers/getOneShow";
 
 export default function ShowPage() {
   const [show, setShow] = useState([])

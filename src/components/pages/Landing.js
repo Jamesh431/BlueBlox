@@ -1,14 +1,14 @@
-import RenderPopular from "../util/RenderPopular"
-import RenderByCategory from "../util/RenderByCategory"
+import PaginatePopular from "../util/PaginatePopular"
+import PaginateByGenre from "../util/PaginateByGenre"
 
 export default function Landing() {
   return(
     <div className="LandingPage">
-            <RenderPopular />
+            <PaginatePopular />
 
-            <RenderByCategory genre={'Drama'}/>
+            <PaginateByGenre genre={'Drama'}/>
 
-            <RenderByCategory genre={'Crime'}/>
+            <PaginateByGenre genre={'Crime'}/>
 
         {/* <div className="CategoryContainer">
           <div className="HeaderWrapper">

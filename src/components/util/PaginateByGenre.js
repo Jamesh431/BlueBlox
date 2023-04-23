@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
 
-import getShows from "./getShows.js"
+import getShows from "../helpers/getShows.js"
 import PaginateShows from "./PaginateShows.js"
 
-export default function RenderByCategory(props) {
+export default function PaginateByGenre(props) {
   const [shows, setShows] = useState([])
 
   useEffect(() => {
@@ -17,7 +17,9 @@ export default function RenderByCategory(props) {
   }, [props.genre])
 
 
+
   return (
     <PaginateShows category={props.genre} sortedArrOfObj={shows}/>
-  )
+    )
+
 }

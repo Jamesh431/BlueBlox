@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-import getShows from "./getShows.js"
+import getShows from "../helpers/getShows.js"
 import PaginateShows from "./PaginateShows.js"
 
 export default function RenderPopular() {
@@ -25,15 +25,6 @@ export default function RenderPopular() {
      .catch(err => console.error("Get Shows Erro: ", err))
   }, [])
   console.log(shows)
-  return (
-    <PaginateShows category={'Popular Shows'} sortedArrOfObj={shows}/>
-  )
-}
 
-
-
-
-
-
-
-
+    return(<PaginateShows category={'Popular Shows'} sortedArrOfObj={shows}/>) 
+  }

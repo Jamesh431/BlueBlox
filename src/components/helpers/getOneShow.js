@@ -1,6 +1,4 @@
 const getOneShow = async (showId) =>  {
-  
-  
   const showLink = ("http://api.tvmaze.com/shows/" + showId)
 
   const shows = await fetch(showLink) 
