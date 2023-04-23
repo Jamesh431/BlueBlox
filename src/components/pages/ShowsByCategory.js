@@ -4,15 +4,16 @@ import ScaleLoader from "react-spinners/ScaleLoader";
 
 import FilterShowsByGenre from "../util/FilterShowsByGenre";
 
+
 export default function ShowsByCategory(){
   const [shows,setShows] = useState([])
   const [sortedGenre,setSortedGenre] = useState("Action")
   const [loaded, setLoaded] = useState(false)
   
   useEffect(() => {
-    FilterShowsByGenre()
+    FilterShowsByGenre(sortedGenre)
     .then(showData => {
-     console.log(showData)
+    //  console.log(showData)
      setShows(showData)
      setLoaded(true)
    })

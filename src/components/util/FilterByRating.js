@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-import getShows from "./getShows.js"
+import getShows from "../helpers/getShows.js"
 
 
 export default function FilterByRating() {
