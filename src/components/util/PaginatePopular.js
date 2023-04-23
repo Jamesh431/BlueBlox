@@ -26,5 +26,5 @@ export default function RenderPopular() {
   }, [])
   console.log(shows)
 
-    return(<PaginateShows category={'Popular Shows'} sortedArrOfObj={shows}/>) 
+    return(<PaginateShows category={'Top Rated'} sortedArrOfObj={shows}/>) 
   }
