@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+import Truncate from "../helpers/truncateText";
+
 const PaginateShows = (props) => {
   const [currentRow, setCurrentRow] = useState(0);
   const numOfShowsOnRow = 5;
@@ -51,7 +53,7 @@ const PaginateShows = (props) => {
               </div>
 
               <div className="show-description"> 
-               {show.summary.replace(/<[^>]*>?/gm, '')}
+               <Truncate desc={show.summary.replace(/<[^>]*>?/gm, '')} num={100}/>
               </div>
             </div>
           ))}
