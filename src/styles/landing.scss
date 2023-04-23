@@ -2,31 +2,66 @@
   height: 100%;
   background-color: #1E1E24;
 
-  .shows-container {
-    display: flex;
-    
-    .shows-wrapper {
+  .category-container {
+
+    .header-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+
+    .pagination-container {
       display: flex;
       flex-direction: row;
-      width: 100%;
-      justify-content: center;
 
-
-      .show-card {
+      .pagination-wrapper{
         display: flex;
-        flex-direction: column;
-        // max-width: 20vh;
+        justify-items: center;
+      }
 
-        .show-title {
-          h2{
-            width: 100%;
+      .shows-container {
+        display: flex;
+        
+        .shows-wrapper {
+          display: flex;
+          
+          .show-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            .show-image {
+              a {
+                img {
+                  width: 250px;
+                  height: auto;
+                }
+              }
+            }
+    
+            .show-title {
+              h2{
+                margin: 10px 0;
+                // width: 100%;
+              }
+            }
+
+            .show-description {
+              text-align: center;
+              width: 90%;
+            }
           }
         }
-      }
     }
 
 
     
+    
+        
+      }
+
+    .line-wrapper {
+      margin: 3em 0;
+    }
   }
 
 

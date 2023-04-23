@@ -34,34 +34,40 @@ const PaginateShows = (props) => {
       </div>
 
       <div className="pagination-container">
-        <button onClick={handlePrevious}>previous</button>
+        <div className="pagination-wrapper">
+          <button onClick={handlePrevious}>{"<"}</button>
+        </div>
+
+        <div className="shows-container">
+          <div className="shows-wrapper">
+            {currentRangeOfRowOfShows.map((show) => (
+              <div className="show-card" key={show.name}>
+                <div className="show-image">
+                  <Link to={`show/${show.id}`}>
+
+                  <img src={show.image.medium}/>
+                  </Link>
+                </div>
+
+                <div className="show-title"> 
+                  <h2>{show.name}</h2>
+                </div>
+
+                <div className="show-description"> 
+                <Truncate desc={show.summary.replace(/<[^>]*>?/gm, '')} num={100}/>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="pagination-wrapper">
+          <button onClick={handleNext}>{'>'}</button>
+        </div>
       </div>
 
-      <div className="shows-container">
-        <div className="shows-wrapper">
-          {currentRangeOfRowOfShows.map((show) => (
-            <div className="show-card" key={show.name}>
-              <div className="show-image">
-                <Link to={`show/${show.id}`}>
-
-                <img src={show.image.medium}/>
-                </Link>
-              </div>
-
-              <div className="show-title"> 
-                <h2>{show.name}</h2>
-              </div>
-
-              <div className="show-description"> 
-               <Truncate desc={show.summary.replace(/<[^>]*>?/gm, '')} num={100}/>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="pagination-container">
-          <button onClick={handleNext}>next</button>
-        </div>
+      <div className="line-wrapper">
+        <hr></hr>
       </div>
     </div>
   );
