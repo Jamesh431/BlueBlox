@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import Truncate from "../helpers/truncateText";
+import initIcons from "../helpers/icons";
 
 const PaginateShows = (props) => {
   const [currentRow, setCurrentRow] = useState(0);
@@ -27,6 +29,8 @@ const PaginateShows = (props) => {
     }
   };
 
+  initIcons()
+
   return (
     <div className="category-container">
       <div className="header-wrapper">
@@ -35,7 +39,7 @@ const PaginateShows = (props) => {
 
       <div className="pagination-container">
         <div className="pagination-wrapper">
-          <button onClick={handlePrevious}>{"<"}</button>
+          <button id="button-left" onClick={handlePrevious}><FontAwesomeIcon icon="fa-solid fa-caret-left" /></button>
         </div>
 
         <div className="shows-container">
@@ -50,11 +54,11 @@ const PaginateShows = (props) => {
                 </div>
 
                 <div className="show-title"> 
-                  <h2>{show.name}</h2>
+                  <h3>{show.name}</h3>
                 </div>
 
                 <div className="show-description"> 
-                <Truncate desc={show.summary.replace(/<[^>]*>?/gm, '')} num={100}/>
+                <Truncate desc={show.summary.replace(/<[^>]*>?/gm, '')} num={90}/>
                 </div>
               </div>
             ))}
@@ -62,7 +66,7 @@ const PaginateShows = (props) => {
         </div>
 
         <div className="pagination-wrapper">
-          <button onClick={handleNext}>{'>'}</button>
+          <button id="button-right" onClick={handleNext}><FontAwesomeIcon icon="fa-solid fa-caret-right" /></button>
         </div>
       </div>
 

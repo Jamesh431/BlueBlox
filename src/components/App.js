@@ -74,6 +74,7 @@ If you have time, try your hand at deploying to Netlify (or other hosting servic
 */
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+import initIcons from "./helpers/icons";
 import Navbar from "./navigation/Navbar";
 import Landing from "./pages/Landing"
 import About from "./pages/About";
@@ -84,6 +85,7 @@ import Footer from "./navigation/Footer"
 
 
 export default function App() {
+	initIcons()
   return (
     <div className="App">
 			<Router>

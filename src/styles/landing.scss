@@ -16,6 +16,25 @@
       .pagination-wrapper{
         display: flex;
         justify-items: center;
+
+        button {
+          height: 467px;
+          width: 50px;
+          // color: transparent;
+          background-color: #3b4f76;
+          border: none;
+          
+        }
+        #button-left {
+          margin-right: -15px;
+          border-radius: 0 10px 10px 0;
+          
+        }
+
+        #button-right {
+          margin-left: -15px;
+          border-radius: 10px 0 0 10px;
+        }
       }
 
       .shows-container {
@@ -39,7 +58,9 @@
             }
     
             .show-title {
-              h2{
+              h3{
+                display: flex;
+                text-align: center;
                 margin: 10px 0;
                 // width: 100%;
               }
