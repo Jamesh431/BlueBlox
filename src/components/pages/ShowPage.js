@@ -38,7 +38,8 @@ export default function ShowPage() {
         </div>
 
         <div className="show-description">
-          <p>{show.summary.replace(/<[^>]*>?/gm, '')}</p>
+          <p>{show.summary.replace(/<[^>]*>/g, '')}</p>
+          {/* Regular Expression notes: the regular expression is defined with the forward slashes, '/', after that are the flags. the 'g' here means global, like match all instead of the first match. The [^ ] is a negated character set. It matches any characters not inside the set, so [^>] would end up returning matching anything but a closing bracket, then after that is the *, which all its doing is taking the previous founded characters (in this case it would be the opening bracket and everything but a closing bracket) and doing it as many times as possible. Then the > means just to find closing brackets */}
         </div>
 
         <div className="show-network">
