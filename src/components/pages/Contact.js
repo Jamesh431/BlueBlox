@@ -86,7 +86,7 @@ export default function Contact() {
             <div className="submit-wrapper">
               <button 
               onClick={()=> {alert('This is not an official site, your message will not be sent')}}
-              // disabled={subjectInput.length === 0 && nameInput.length === 0 && messageInput.length === 0 && emailInput.length === 0 && !emailInput.some(['.com','.edu','.net','.co'])} 
+              disabled={subjectInput.length === 0 && nameInput.length === 0 && messageInput.length === 0 && emailInput.length === 0 && !['.com','.edu','.net','.co'].includes(emailInput)} 
               >Submit</button>
             </div>
           </div>
