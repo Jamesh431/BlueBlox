@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import ScaleLoader from "react-spinners/ScaleLoader";
 
 import FilterShowsByGenre from "../util/FilterShowsByGenre";
-import Truncate from "../helpers/truncateText";
+import parseDescription from "../helpers/parseDescription";
 
 
 export default function ShowsByCategory(){
@@ -86,7 +86,7 @@ export default function ShowsByCategory(){
                   </div>
 
                   <div className="show-description"> 
-                  <Truncate desc={show.summary.replace(/<[^>]*>?/gm, '')} num={200}/>
+                  <parseDescription desc={show.summary} num={200}/>
                   </div>
                 </div>
               ))}
