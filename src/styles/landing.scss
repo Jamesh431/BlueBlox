@@ -27,22 +27,24 @@
           
         }
         #button-left {
-          margin-right: -15px;
           border-radius: 0 10px 10px 0;
           
         }
 
         #button-right {
-          margin-left: -15px;
           border-radius: 10px 0 0 10px;
         }
       }
 
       .shows-container {
         display: flex;
+        width: 100%;
+        justify-content: center;
         
         .shows-wrapper {
-          display: flex;
+          display: grid;
+          grid-template-columns: .2fr .2fr .2fr .2fr .2fr;
+          column-gap: 1em;
           
           .show-card {
             display: flex;
