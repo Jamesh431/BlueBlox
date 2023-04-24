@@ -8,7 +8,7 @@ Navigation
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { NavLink } from "react-router-dom";
 
-import initIcons from "../helpers/icons";
+// import initIcons from "../helpers/icons";
 
 export default function Footer() {
   return (

@@ -11,8 +11,16 @@
 		- Contact information
 			- Does not need to actually contain your real info. Fake info is perfect.
 */
+import { useState } from "react"
 
 export default function Contact() {
+  
+  const [emailInput, setEmailInput] = useState("")
+  const [subjectInput, setSubjectInput] = useState("")
+  const [nameInput, setNameInput] = useState("")
+  const [messageInput, setMessageInput] = useState("")
+
+
   return (
     <div className="contact-page">
         <div className="contact-header">
@@ -44,27 +52,42 @@ export default function Contact() {
 
           <div className="user-information-wrapper">
             <div className="user-email">
-              <input type="email" placeholder="Your email"></input>
+              <input type="email" 
+              placeholder="Your email"
+              onChange={(event) => setEmailInput(event.target.value)}
+              ></input>
             </div>
 
             <div className="subject-wrapper">
-              <input type="text" placeholder="Subject"></input>
+              <input type="text" 
+              placeholder="Subject"
+              onChange={(event) => setSubjectInput(event.target.value)}
+              ></input>
             </div>
           </div>
 
           <div className="users-name">
             <div className="user-full-name">
-              <input type="text" placeholder="Your Name"></input>
+              <input type="text" 
+              placeholder="Your Name"
+              onChange={(event) => setNameInput(event.target.value)}
+              ></input>
             </div>
           </div>
 
           <div className="message-container">
             <div className="text-wrapper">
-              <input type="subject" placeholder="Message here"></input>
+              <input type="subject" 
+              placeholder="Message here"
+              onChange={(event) => setMessageInput(event.target.value)}
+              ></input>
             </div>
 
             <div className="submit-wrapper">
-              <button>Submit</button>
+              <button 
+              onClick={()=> {alert('This is not an official site, your message will not be sent')}}
+              // disabled={subjectInput.length === 0 && nameInput.length === 0 && messageInput.length === 0 && emailInput.length === 0 && !emailInput.some(['.com','.edu','.net','.co'])} 
+              >Submit</button>
             </div>
           </div>
         </div>
