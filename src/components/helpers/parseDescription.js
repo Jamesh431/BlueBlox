@@ -12,8 +12,12 @@ export default function ParseDescription(props) {
     }
   }
 
-  if (workingStr.length > props.num) {
-    return workingStr.slice(0, props.num) + '...'
+  if (props.num) {
+    if (workingStr.length > props.num) {
+      return workingStr.slice(0, props.num) + '...'
+    } else {
+      return workingStr
+    }
   } else {
     return workingStr
   }

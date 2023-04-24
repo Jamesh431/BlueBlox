@@ -15,13 +15,15 @@
 export default function Contact() {
   return (
     <div className="contact-page">
-      <div className="contact-container">
         <div className="contact-header">
           <h1>Contact page</h1>
+
+          <div className="break-wrapper">
+            <hr></hr>
+          </div>
         </div>
-        <div className="line-wrapper">
-          <hr></hr>
-        </div>
+
+      <div className="contact-container">
         <div className="contact-information-container">
           <div className="number-wrapper">
             <p>Phone: 555-555-555</p>
