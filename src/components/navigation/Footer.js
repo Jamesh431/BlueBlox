@@ -5,7 +5,10 @@ Navigation
 	- Pages MAY have other links to navigate around the app as well (like a "go back" type button)
 */
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { NavLink } from "react-router-dom";
+
+import initIcons from "../helpers/icons";
 
 export default function Footer() {
   return (
@@ -17,11 +20,12 @@ export default function Footer() {
           </div>
 
           <div className="github-links">
-            <a href="https://github.com/James-Devpipline" target="_blank"> My DevPipeline Github</a>
-            <a href="https://github.com/Jamesh431" target="_blank">Personal Github</a>
+            <a id="devpipeline-github" href="https://github.com/James-Devpipline" target="_blank"><FontAwesomeIcon icon="fa-brands fa-github" /></a>
+            <a id="personal-github" href="https://github.com/Jamesh431" target="_blank"><FontAwesomeIcon icon="fa-brands fa-github" /></a>
           </div>
         </div>
       </div>
+
 
       <div className="footer-right">
         <div className="contact-nav-wrapper">
