@@ -17,6 +17,21 @@
       .text-wrapper {
         margin-right: 1em;
       }
+
+      .github-links {
+        width: 10%;
+        display: flex;
+        justify-content: flex-start;
+
+        #devpipeline-github {
+          margin-right: 1em;
+          color: #3aafaa
+        }
+
+        #personal-github {
+          color: #9d0c0b;
+        }
+      }
     }
   }
 
@@ -25,6 +40,8 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+
+    
 
   }
 
