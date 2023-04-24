@@ -1,5 +1,12 @@
 @import "mixins";
 
 .show-page{
-  @include background-scheme
+  @include background-scheme;
+
+  display: grid;
+  grid-template-columns: .3fr .7fr;
+  align-items: center;
+  justify-content: center;
+
+
 }
