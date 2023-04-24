@@ -11,8 +11,6 @@ export default function ParseDescription(props) {
       workingStr += props.desc[i]
     }
   }
-  
-console.log(workingStr)
 
   if (workingStr.length > props.num) {
     return workingStr.slice(0, props.num) + '...'
