@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-import parseDescription from "../helpers/parseDescription";
+import ParseDescription from "../helpers/parseDescription";
 import initIcons from "../helpers/icons";
 
 const PaginateShows = (props) => {
@@ -58,7 +58,7 @@ const PaginateShows = (props) => {
                 </div>
 
                 <div className="show-description"> 
-                <parseDescription desc={show.summary} num={90}/>
+                <ParseDescription desc={show.summary} num={90}/>
                 </div>
               </div>
             ))}
