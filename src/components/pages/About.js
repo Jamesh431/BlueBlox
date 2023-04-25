@@ -29,12 +29,12 @@ export default function About() {
     <div className="AboutPage">
       <div className="ProjectDescription">
         <h1>Project Description</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, iste reprehenderit debitis officia ducimus inventore natus asperiores quis labore dolorem quibusdam saepe quo esse nemo nisi unde tempore molestias voluptatibus!</p>
+        <p>Welcome to BlueBox! This project is my capstone for the Front End Course DevPipeline.</p>
       </div>
       
       <div className="IndustryGoals">
         <h1>My Current Industry Goals</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, iste reprehenderit debitis officia ducimus inventore natus asperiores quis labore dolorem quibusdam saepe quo esse nemo nisi unde tempore molestias voluptatibus!</p>
+        <p>Currently my industry goal is to work with devpipeline to grow as a fullstack developer, then I would like to work with the church on their apps and websites as a full-stack developer and continue to grow my career from there.</p>
       </div>
       
       <div className="WhatILearned">
@@ -49,7 +49,7 @@ export default function About() {
 
       <div className="FavoriteLanguage">
         <h1>My Favorite language</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, iste reprehenderit debitis officia ducimus inventore natus asperiores quis labore dolorem quibusdam saepe quo esse nemo nisi unde tempore molestias voluptatibus!</p>
+        <p>My favorite language is currently JavaScript as first its documentation is easier to understand than Python. Also, its a better choice for developing mobile and desktop websites. There are far more capabilities for web development when you take into mind React, JQuery, and Angular. Python isn't optimal for front-end development </p>
       </div>
     </div>
     )
