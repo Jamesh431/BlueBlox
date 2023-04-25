@@ -26,32 +26,66 @@ export default function ShowPage() {
     <div className="show-page">
       {loaded ? 
       <>
-        <div className="show-information-column-1">
-          <div className="show-title">
-            <h1>{show.name}</h1>
+        <div className="show-information">
+          <div className="show-information-column-1">
+            <div className="show-title">
+              <h1>{show.name}</h1>
+            </div>
+
+            <div className="show-image">
+              <img src={show.image.original}/>
+            </div>
           </div>
 
-          <div className="show-image">
-            <img src={show.image.medium}/>
-          </div>
+          <div className="show-information-column-2">
+            <div className="show-description">
+              <p>Show Summary: <ParseDescription desc={show.summary} /></p>
+            </div>
 
-          <div className="show-rating">
-            <p>Rating: {show.rating.average}</p>
+            <div className="show-network">
+              <p>Network: {!show.network ? 'N/A' :
+              show.officialSite ? <a href={show.officialSite} target="_blank">{show.network.name}</a> 
+              : `${show.network }`}</p>
+            </div>
+
+            <div className="show-rating">
+              <p>Rating: {show.rating.average}/10</p>
+            </div>
+
+            <div className="show-status">
+              <p>Status: {show.status}</p>
+            </div>
+
+            <div className="show-type">
+              <p>Type: {show.type}</p>
+            </div>
+
+            <div className="show-genres">
+              <p>Genres: {show.genres.length!==0 ? show.genres.map(element => {
+                return `${element} \n`
+              }) : "No Genres Given"}</p>
+            </div>
+
+            <div className="show-channel">
+              {!show.webChannel ? <p>Channel/Provider: None Given</p> 
+              : 
+              show.webChannel.officialSite ? 
+              <p>Channel/Provider: <a href={show.webChannel.officialSite} target="_blank">{show.webChannel.name}</a></p> 
+              : <p>Channel/Provider: {show.webChannel.name}</p>}
+            </div>
+
+            <div className="show-premiered-date">
+              <p>Premiered: {show.premiered}</p>
+            </div>
           </div>
         </div>
 
-        <div className="show-information-column-2">
-          <div className="show-description">
-            <p><ParseDescription desc={show.summary} /></p>
-          </div>
-
-          <div className="show-network">
-            <p>Network: {show.network ? show.network.name : 'N/A'}</p>
-          </div>
+        <div className="break-wrapper">
+          <hr></hr>
         </div>
-
-
+        
         <div className="show-reviews">
+
           <div className="review-header">
             <h3>Reviews</h3>
           </div>

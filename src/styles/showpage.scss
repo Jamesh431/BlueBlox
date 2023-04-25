@@ -1,12 +1,54 @@
 @import "mixins";
 
+$official-site-link: #3b4f76;
+
+
 .show-page{
   @include background-scheme;
 
-  display: grid;
-  grid-template-columns: .3fr .7fr;
-  align-items: center;
-  justify-content: center;
+  .show-information {
+    display: grid;
+    grid-template-columns: .7fr 1fr;
+    align-items: center;
+    justify-content: center;
+    .show-information-column-1 {
+      margin-left: 1em;
+      .show-title {
+      }
+      .show-image {
+        img {
+          width: 500px
+        }
+      }
+    }
+  
+    .show-information-column-2 {
+      display: flex;
+      flex-direction: column;
+  
+      .show-network {
+        a {
+          color: $official-site-link;
+        }
+      }
+      
+      .show-premiered-date {
+        a {
+          color: $official-site-link;
+        }
+      }
+    }
+  }
+
+  .break-wrapper {
+    margin: 3em 0;
+  }
+  .show-reviews {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
 
 
 }
