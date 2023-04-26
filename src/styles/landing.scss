@@ -27,11 +27,20 @@
         }
         #button-left {
           border-radius: 0 10px 10px 0;
-          
+
+          svg {
+            width: 20px;
+            height: auto;
+          }
         }
 
         #button-right {
           border-radius: 10px 0 0 10px;
+
+          svg {
+            width: 20px;
+            height: auto;
+          }
         }
       }
 
@@ -44,6 +53,7 @@
           display: grid;
           grid-template-columns: .2fr .2fr .2fr .2fr .2fr;
           column-gap: 1em;
+          margin-top: .5em;
           
           .show-card {
             display: flex;
