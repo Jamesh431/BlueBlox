@@ -80,6 +80,13 @@
             .show-description {
               text-align: center;
               width: 90%;
+              p {
+                margin-top: 0;
+              }
+
+              .rating-description {
+                display: none;
+              }
             }
           }
         }

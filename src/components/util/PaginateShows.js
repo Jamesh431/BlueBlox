@@ -59,7 +59,13 @@ const PaginateShows = (props) => {
                 </div>
 
                 <div className="show-description"> 
-                <ParseDescription desc={show.summary} num={90}/>
+                <p className="description-paragraph">
+                  <ParseDescription desc={show.summary} num={90}/>
+                </p>
+                
+                <p className="rating-description">
+                  Rating: {show.rating.average}/10
+                </p>
                 </div>
               </div>
             ))}

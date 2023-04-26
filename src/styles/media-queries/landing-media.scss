@@ -6,8 +6,6 @@
     .category-container {
       display: flex;
       flex-direction: column;
-      width: 40%;
-      height: 120vh;
 
       .header-wrapper {
         display: flex;
@@ -17,12 +15,35 @@
 
       .pagination-container {
         display: grid;
-        grid-template-columns: 10px 175px 10px;
+        grid-template-columns: 10px 1fr 10px;
 
         .shows-container {
           .shows-wrapper {
-            // display: grid;
-            // grid-template-columns: ;
+            display: grid;
+            grid-template-columns: .5fr .5fr .5fr;
+            justify-items: center;
+
+            
+            .show-card {
+
+              .show-image {
+                a {
+                  img {
+                    width: 80px;
+                  }
+                }
+              }
+
+              .show-description {
+                .rating-description {
+                  display: block;
+                }
+
+                .description-paragraph {
+                  display: none;
+                }
+              }
+            }
           }
         }
       }
