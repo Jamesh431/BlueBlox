@@ -1,0 +1,42 @@
+.contact-page {
+  .contact-container {
+    width: 100%;
+
+    .contact-us-container{
+      .text-wrapper {
+        width: 100%;
+        text-align: center;
+      }
+
+      .user-information-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        div {
+          // width: 137.33px;
+          input {
+            width: 130.33px;
+          }
+        }
+      }
+
+      .users-name {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .message-container{
+        .text-wrapper{
+          input {
+            width: 20em;
+          }
+        }
+
+        .submit-wrapper {
+          margin: 15px 0;
+        }
+      }
+    }
+  }
+}
