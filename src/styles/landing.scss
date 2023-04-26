@@ -1,6 +1,8 @@
+@import "./mixins.scss";
+
 .landing-page {
   height: 100%;
-  background-color: #1E1E24;
+  @include background-scheme;
 
   .category-container {
 
