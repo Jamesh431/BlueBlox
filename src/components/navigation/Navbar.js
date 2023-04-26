@@ -28,7 +28,7 @@ export default function Navbar(props) {
         </div>
 
         <div className="search-button">
-          <button type="submit">?</button>
+          <button type="submit" onClick={()=> {alert('The search functionality has not been built out yet :/')}}>?</button>
         </div>
       </div>
     </div>
