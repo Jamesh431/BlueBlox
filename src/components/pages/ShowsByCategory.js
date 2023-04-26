@@ -14,7 +14,6 @@ export default function ShowsByCategory(){
   useEffect(() => {
     FilterShowsByGenre(sortedGenre)
     .then(showData => {
-    //  console.log(showData)
      setShows(showData)
      setLoaded(true)
    })

@@ -24,7 +24,6 @@ export default function FilterByRating() {
     })
      .catch(err => console.error("Get Shows Erro: ", err))
   }, [])
-  console.log(shows)
   
     return(shows) 
   }

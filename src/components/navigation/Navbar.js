@@ -1,10 +1,3 @@
-/*
-Navigation
-	- Sidebar or Header
-	- Footer
-	- Pages MAY have other links to navigate around the app as well (like a "go back" type button)
-*/
-
 import { NavLink } from "react-router-dom";
 
 export default function Navbar(props) {

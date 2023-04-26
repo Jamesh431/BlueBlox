@@ -79,5 +79,3 @@ const PaginateShows = (props) => {
 
 export default PaginateShows;
 
-
-// with the description for the show, take in the old ... thing we made for class that takes text and shortens it by some length

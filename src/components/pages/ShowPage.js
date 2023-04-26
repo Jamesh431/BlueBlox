@@ -13,13 +13,11 @@ export default function ShowPage() {
   useEffect(() => {
      getOneShow(showID)
     .then(showData => {
-      console.log(showData)
       setShow(showData)
       setLoaded(true)
     })
     .catch(err => console.error("getOneShow Erro: ", err))
   },[showID]) 
-  console.log(show)
 
   
   return (
