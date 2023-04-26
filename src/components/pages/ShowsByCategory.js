@@ -36,7 +36,6 @@ export default function ShowsByCategory(){
                 <option value="Action">Action</option>
                 <option value="Adventure">Adventure</option>
                 <option value="Anime">Anime</option>
-                <option value="Children">Children</option>
                 <option value="Comedy">Comedy</option>
                 <option value="Crime">Crime</option>
                 <option value="Drama">Drama</option>
