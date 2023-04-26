@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react"
+import ScaleLoader from "react-spinners/ScaleLoader";
 
 import getShows from "../helpers/getShows.js"
 import PaginateShows from "./PaginateShows.js"
 
 export default function RenderPopular() {
   const [shows, setShows] = useState([]) 
+  const [loaded, setLoaded] = useState(false)
 
 
   useEffect(() => {
@@ -19,11 +21,26 @@ export default function RenderPopular() {
           }
         }
     })
-
+      setLoaded(true)
       setShows(popluar)
     })
      .catch(err => console.error("Get Shows Erro: ", err))
   }, [])
-  
-    return(<PaginateShows category={'Top Rated'} sortedArrOfObj={shows}/>) 
+
+    return(
+      loaded ? 
+          <PaginateShows category={'Top Rated'} sortedArrOfObj={shows}/>
+
+        :
+
+        <div className="loading"> 
+          <ScaleLoader
+          size={150}
+          aria-label="Loading Spinner"
+          data-testid="loader"
+          color= "#4BCFFA"
+          />
+        </div>
+    
+    ) 
   }
