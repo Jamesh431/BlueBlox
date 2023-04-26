@@ -24,6 +24,6 @@ export default function RenderPopular() {
     })
      .catch(err => console.error("Get Shows Erro: ", err))
   }, [])
-
+  
     return(<PaginateShows category={'Top Rated'} sortedArrOfObj={shows}/>) 
   }
