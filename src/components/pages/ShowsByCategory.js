@@ -96,12 +96,12 @@ export default function ShowsByCategory(){
         :
 
           <div className="loading"> 
-          <ScaleLoader
-          size={150}
-          aria-label="Loading Spinner"
-          data-testid="loader"
-          color= "#4BCFFA"
-          />
+            <ScaleLoader
+            size={150}
+            aria-label="Loading Spinner"
+            data-testid="loader"
+            color= "#4BCFFA"
+            />
           </div>
         
       }
