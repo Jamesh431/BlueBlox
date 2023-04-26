@@ -3,7 +3,7 @@ import PaginateByGenre from "../util/PaginateByGenre"
 
 export default function Landing() {
   return(
-    <div className="LandingPage">
+    <div className="landing-page">
             <PaginatePopular />
 
             <PaginateByGenre genre={'Drama'}/>

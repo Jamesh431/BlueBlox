@@ -1,0 +1,16 @@
+@media (max-width: 320px) {
+  .navbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 5px;
+    .nav-right {
+      margin-top: 5px;
+    }
+    .nav-left {
+      .home-nav-wrapper {
+        margin-right: 20px;
+
+      }      
+    }
+  }
+}
