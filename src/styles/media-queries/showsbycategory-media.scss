@@ -1,0 +1,39 @@
+@media (max-width: 320px) {
+  .browse-by-category {
+    .shows-container {
+      .shows-wrapper {
+        display: grid;
+        grid-template-columns: 2fr 2fr 2fr;
+
+        .show-card {
+          .show-image {
+            img {
+              width: 100px;
+              height: auto;
+            }
+          }
+
+          .show-title {
+            width: 90px;
+            text-align: center;
+
+            h2 {
+              font-size:medium;
+            }
+          }
+
+          .show-description {
+            width: 90px;
+            height: 3.6em;
+            
+            // text-align: center;
+            // font-size: small;
+            // white-space: nowrap;
+            overflow: hidden;
+            // text-overflow: ellipsis;
+          }
+        }
+      }
+    }
+  }
+}
