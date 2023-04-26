@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-import ParseDescription from "../helpers/parseDescription";
+import ParseDescription from "../helpers/ParseDescription";
 
 const PaginateShows = (props) => {
   const [currentRow, setCurrentRow] = useState(0);

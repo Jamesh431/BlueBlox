@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import ScaleLoader from "react-spinners/ScaleLoader";
 
 import getOneShow from "../helpers/getOneShow";
-import ParseDescription from "../helpers/parseDescription";
+import ParseDescription from "../helpers/ParseDescription";
 
 export default function ShowPage() {
   const [show, setShow] = useState([])

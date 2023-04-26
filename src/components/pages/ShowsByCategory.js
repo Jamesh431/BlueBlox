@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import ScaleLoader from "react-spinners/ScaleLoader";
 
 import FilterShowsByGenre from "../util/FilterShowsByGenre";
-import ParseDescription from "../helpers/parseDescription";
+import ParseDescription from "../helpers/ParseDescription";
 
 
 export default function ShowsByCategory(){
