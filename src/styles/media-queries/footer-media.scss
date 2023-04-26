@@ -1,0 +1,33 @@
+@media (max-width: 320px) {
+  .footer-container {
+    display: grid;
+    grid-template-columns: .9fr .2fr;
+
+    .footer-left {
+      .github-wrapper {
+        .text-wrapper {
+          margin-right: .5em;
+        }
+
+        .github-links{
+          display: grid;
+          grid-template-rows: 1fr;
+          row-gap: 1em;
+
+          svg {
+            width: 25px;
+            height: auto;
+          }
+        }
+      }
+    }
+
+    .footer-right {
+      flex-direction: column;
+      flex-wrap: wrap;
+      div {
+        text-align: center;
+      }
+    }
+  }
+}
