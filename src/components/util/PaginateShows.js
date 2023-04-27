@@ -7,21 +7,29 @@ import ParseDescription from "../helpers/ParseDescription";
 const PaginateShows = (props) => {
   const [currentRow, setCurrentRow] = useState(0);
   const [numOfShowsOnRow, setNumOfShowsOnRow] = useState(5);
-  const [windowSizeChecked, setWindowSizeChecked] = useState(false)
+  const [sizeChecked, setSizeChecked] = useState(false)
+
+  if (!sizeChecked) {
+    if (window.innerWidth <= 320) {
+      setNumOfShowsOnRow(4)
+    } else {
+      setNumOfShowsOnRow(5)
+    }
+    setSizeChecked(true)
+  }
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 500) {
+
+      if (window.innerWidth <= 320) {
         setNumOfShowsOnRow(4)
       } else {
         setNumOfShowsOnRow(5)
       }
     }
-
-    // window.addEventListener('resize', handleResize)
-    
+    window.addEventListener('resize', handleResize)
     return () => {
-      window.addEventListener('resize', handleResize)
+      window.removeEventListener('resize', handleResize)
     }
   }, [])
 
