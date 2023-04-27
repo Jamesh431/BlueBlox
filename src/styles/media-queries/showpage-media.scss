@@ -1,0 +1,28 @@
+@media (max-width: 320px) {
+  .show-page {
+    .show-information{
+      display: flex;
+      flex-direction: column;
+
+      .show-information-column-1 {
+        .show-title{
+          text-align: center;
+          margin: 0;
+        }
+
+        .show-image {
+          img {
+            width: 200px;
+            height: auto;
+          }
+        }
+      }
+
+      .show-information-column-2 {
+        .show-description {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
