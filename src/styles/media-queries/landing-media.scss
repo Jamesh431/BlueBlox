@@ -14,12 +14,14 @@
 
       .pagination-container {
         display: grid;
-        grid-template-columns: 10px .93fr 10px;
+        grid-template-columns: .7fr 3fr .7fr;
 
         .shows-container {
           .shows-wrapper {
             display: grid;
-            grid-template-columns: .5fr .5fr .5fr;
+            grid-template-columns: 80px 80px;
+            grid-template-rows: 230px 230px;
+            row-gap: 8px;
             justify-items: center;
 
             
@@ -33,7 +35,12 @@
                 }
               }
 
+              .show-title {
+                font-size: 12px;
+              }
+
               .show-description {
+                font-size: 11px;
                 .rating-description {
                   display: block;
                 }

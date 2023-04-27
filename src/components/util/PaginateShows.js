@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
@@ -6,7 +6,24 @@ import ParseDescription from "../helpers/ParseDescription";
 
 const PaginateShows = (props) => {
   const [currentRow, setCurrentRow] = useState(0);
-  const numOfShowsOnRow = 5;
+  const [numOfShowsOnRow, setNumOfShowsOnRow] = useState(5);
+  const [windowSizeChecked, setWindowSizeChecked] = useState(false)
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 500) {
+        setNumOfShowsOnRow(4)
+      } else {
+        setNumOfShowsOnRow(5)
+      }
+    }
+
+    // window.addEventListener('resize', handleResize)
+    
+    return () => {
+      window.addEventListener('resize', handleResize)
+    }
+  }, [])
 
   const rowCount = Math.ceil(props.sortedArrOfObj.length / numOfShowsOnRow);
   const indexOfFirstShowInRow = currentRow * numOfShowsOnRow;
