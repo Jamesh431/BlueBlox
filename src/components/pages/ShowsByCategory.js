@@ -5,24 +5,23 @@ import ScaleLoader from "react-spinners/ScaleLoader";
 import FilterShowsByGenre from "../util/FilterShowsByGenre";
 import ParseDescription from "../helpers/ParseDescription";
 
+export default function ShowsByCategory() {
+  const [shows, setShows] = useState([]);
+  const [sortedGenre, setSortedGenre] = useState("Action");
+  const [loaded, setLoaded] = useState(false);
 
-export default function ShowsByCategory(){
-  const [shows,setShows] = useState([])
-  const [sortedGenre,setSortedGenre] = useState("Action")
-  const [loaded, setLoaded] = useState(false)
-  
   useEffect(() => {
     FilterShowsByGenre(sortedGenre)
-    .then(showData => {
-     setShows(showData)
-     setLoaded(true)
-   })
-   .catch(err => console.error("getOneShow Erro: ", err))
- },[sortedGenre]) 
-  
-  return(
+      .then((showData) => {
+        setShows(showData);
+        setLoaded(true);
+      })
+      .catch((err) => console.error("getOneShow Erro: ", err));
+  }, [sortedGenre]);
+
+  return (
     <div className="browse-by-category">
-      {loaded ?
+      {loaded ? (
         <>
           <div className="header-container">
             <div className="header-wrapper">
@@ -30,9 +29,12 @@ export default function ShowsByCategory(){
             </div>
 
             <div className="category-selection">
-              <select className='category-control' onChange={(event) => {
-                setSortedGenre(event.target.value)
-              }}>
+              <select
+                className="category-control"
+                onChange={(event) => {
+                  setSortedGenre(event.target.value);
+                }}
+              >
                 <option value="Action">Action</option>
                 <option value="Adventure">Adventure</option>
                 <option value="Anime">Anime</option>
@@ -57,7 +59,6 @@ export default function ShowsByCategory(){
                 <option value="Western">Western</option>
               </select>
             </div>
-
           </div>
 
           <div className="break-wrapper">
@@ -74,37 +75,32 @@ export default function ShowsByCategory(){
                 <div className="show-card" key={show.name}>
                   <div className="show-image">
                     <Link to={`show/${show.id}`}>
-
-                    <img src={show.image.medium}/>
+                      <img src={show.image.medium} alt={show.name} />
                     </Link>
                   </div>
 
-                  <div className="show-title"> 
+                  <div className="show-title">
                     <h2>{show.name}</h2>
                   </div>
 
-                  <div className="show-description"> 
-                  <ParseDescription desc={show.summary} num={200}/>
+                  <div className="show-description">
+                    <ParseDescription desc={show.summary} num={200} />
                   </div>
                 </div>
               ))}
             </div>
           </div>
         </>
-
-        :
-
-          <div className="loading"> 
-            <ScaleLoader
+      ) : (
+        <div className="loading">
+          <ScaleLoader
             size={150}
             aria-label="Loading Spinner"
             data-testid="loader"
-            color= "#4BCFFA"
-            />
-          </div>
-        
-      }
+            color="#4BCFFA"
+          />
+        </div>
+      )}
     </div>
-
-  )
+  );
 }

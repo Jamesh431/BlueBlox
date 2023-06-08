@@ -1,37 +1,36 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import ParseDescription from "../helpers/ParseDescription";
 
 const PaginateShows = (props) => {
   const [currentRow, setCurrentRow] = useState(0);
   const [numOfShowsOnRow, setNumOfShowsOnRow] = useState(5);
-  const [sizeChecked, setSizeChecked] = useState(false)
+  const [sizeChecked, setSizeChecked] = useState(false);
 
   if (!sizeChecked) {
     if (window.innerWidth <= 320) {
-      setNumOfShowsOnRow(4)
+      setNumOfShowsOnRow(4);
     } else {
-      setNumOfShowsOnRow(5)
+      setNumOfShowsOnRow(5);
     }
-    setSizeChecked(true)
+    setSizeChecked(true);
   }
 
   useEffect(() => {
     const handleResize = () => {
-
       if (window.innerWidth <= 320) {
-        setNumOfShowsOnRow(4)
+        setNumOfShowsOnRow(4);
       } else {
-        setNumOfShowsOnRow(5)
+        setNumOfShowsOnRow(5);
       }
-    }
-    window.addEventListener('resize', handleResize)
+    };
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener('resize', handleResize)
-    }
-  }, [])
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const rowCount = Math.ceil(props.sortedArrOfObj.length / numOfShowsOnRow);
   const indexOfFirstShowInRow = currentRow * numOfShowsOnRow;
@@ -39,7 +38,6 @@ const PaginateShows = (props) => {
     indexOfFirstShowInRow,
     indexOfFirstShowInRow + numOfShowsOnRow
   );
-
 
   const handlePrevious = () => {
     if (currentRow > 0) {
@@ -53,7 +51,6 @@ const PaginateShows = (props) => {
     }
   };
 
-
   return (
     <div className="category-container">
       <div className="header-wrapper">
@@ -62,10 +59,9 @@ const PaginateShows = (props) => {
 
       <div className="pagination-container">
         <div className="pagination-wrapper">
-          <button 
-          id="button-left" 
-          onClick={handlePrevious}><FontAwesomeIcon 
-          icon="fa-solid fa-caret-left" /></button>
+          <button id="button-left" onClick={handlePrevious}>
+            <FontAwesomeIcon icon="fa-solid fa-caret-left" />
+          </button>
         </div>
 
         <div className="shows-container">
@@ -74,23 +70,22 @@ const PaginateShows = (props) => {
               <div className="show-card" key={show.name}>
                 <div className="show-image">
                   <Link to={`show/${show.id}`}>
-
-                  <img src={show.image.medium}/>
+                    <img src={show.image.medium} alt={show.name} />
                   </Link>
                 </div>
 
-                <div className="show-title"> 
+                <div className="show-title">
                   <h3>{show.name}</h3>
                 </div>
 
-                <div className="show-description"> 
-                <p className="description-paragraph">
-                  <ParseDescription desc={show.summary} num={90}/>
-                </p>
-                
-                <p className="rating-description">
-                  Rating: {show.rating.average}/10
-                </p>
+                <div className="show-description">
+                  <p className="description-paragraph">
+                    <ParseDescription desc={show.summary} num={90} />
+                  </p>
+
+                  <p className="rating-description">
+                    Rating: {show.rating.average}/10
+                  </p>
                 </div>
               </div>
             ))}
@@ -98,9 +93,9 @@ const PaginateShows = (props) => {
         </div>
 
         <div className="pagination-wrapper">
-          <button 
-          id="button-right" 
-          onClick={handleNext}><FontAwesomeIcon icon="fa-solid fa-caret-right" /></button>
+          <button id="button-right" onClick={handleNext}>
+            <FontAwesomeIcon icon="fa-solid fa-caret-right" />
+          </button>
         </div>
       </div>
 
@@ -112,4 +107,3 @@ const PaginateShows = (props) => {
 };
 
 export default PaginateShows;
-
