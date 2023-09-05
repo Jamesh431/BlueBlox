@@ -1,24 +1,24 @@
-export default function ParseDescription(props) {
-  let workingStr = ''
-  let doParse = false
-  
+export default function parseDescription(props) {
+  let workingStr = "";
+  let doParse = false;
+
   for (let i = 0; i < props.desc.length; i++) {
-    if (props.desc[i] === '<') {
-      doParse = false
-    } else if (props.desc[i] === '>') {
-      doParse = true
+    if (props.desc[i] === "<") {
+      doParse = false;
+    } else if (props.desc[i] === ">") {
+      doParse = true;
     } else if (doParse) {
-      workingStr += props.desc[i]
+      workingStr += props.desc[i];
     }
   }
 
   if (props.num) {
     if (workingStr.length > props.num) {
-      return workingStr.slice(0, props.num) + '...'
+      return workingStr.slice(0, props.num) + "...";
     } else {
-      return workingStr
+      return workingStr;
     }
   } else {
-    return workingStr
+    return workingStr;
   }
 }

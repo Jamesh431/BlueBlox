@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import ScaleLoader from "react-spinners/ScaleLoader";
 
 import FilterShowsByGenre from "../util/FilterShowsByGenre";
-import ParseDescription from "../helpers/ParseDescription";
+import parseDescription from "../helpers/parseDescription";
 
 export default function ShowsByCategory() {
   const [shows, setShows] = useState([]);
@@ -84,7 +84,7 @@ export default function ShowsByCategory() {
                   </div>
 
                   <div className="show-description">
-                    <ParseDescription desc={show.summary} num={200} />
+                    <parseDescription desc={show.summary} num={200} />
                   </div>
                 </div>
               ))}

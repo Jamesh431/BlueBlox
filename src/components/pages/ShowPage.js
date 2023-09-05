@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import ScaleLoader from "react-spinners/ScaleLoader";
 
 import getOneShow from "../helpers/getOneShow";
-import ParseDescription from "../helpers/ParseDescription";
+import parseDescription from "../helpers/parseDescription";
 
 export default function ShowPage() {
   const [show, setShow] = useState([]);
@@ -37,7 +37,7 @@ export default function ShowPage() {
             <div className="show-information-column-2">
               <div className="show-description">
                 <p>
-                  Show Summary: <ParseDescription desc={show.summary} />
+                  Show Summary: <parseDescription desc={show.summary} />
                 </p>
               </div>
 
