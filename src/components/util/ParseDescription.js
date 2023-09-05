@@ -1,4 +1,4 @@
-export default function parseDescription(props) {
+export default function ParseDescription(props) {
   let workingStr = "";
   let doParse = false;
 

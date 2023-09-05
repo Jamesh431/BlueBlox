@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import parseDescription from "../helpers/parseDescription";
+import ParseDescription from "./ParseDescription";
 
 const PaginateShows = (props) => {
   const [currentRow, setCurrentRow] = useState(0);
@@ -80,7 +80,7 @@ const PaginateShows = (props) => {
 
                 <div className="show-description">
                   <p className="description-paragraph">
-                    <parseDescription desc={show.summary} num={90} />
+                    <ParseDescription desc={show.summary} num={90} />
                   </p>
 
                   <p className="rating-description">
